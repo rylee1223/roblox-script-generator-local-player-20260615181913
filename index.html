@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Script Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Roblox Script Generator</h1>
+        <p>Generate LocalPlayer scripts with OpenRouter's GPT‑OSS‑120B model</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <form id="generator-form">
+                <label for="api-key">OpenRouter API Key (Free)</label>
+                <input type="password" id="api-key" placeholder="sk-…" required autocomplete="off">
+
+                <label for="prompt">What should the script do?</label>
+                <textarea id="prompt" rows="4" placeholder="e.g., teleport the LocalPlayer to (0, 100, 0) when they press 'T'." required></textarea>
+
+                <button type="submit" class="primary-btn">Generate Script</button>
+            </form>
+        </section>
+
+        <section class="output-section hidden" id="output-section">
+            <h2>Generated Script</h2>
+            <pre id="script-output" class="code-block"></pre>
+            <button class="secondary-btn" id="copy-btn">Copy to Clipboard</button>
+        </section>
+
+        <section class="status-section hidden" id="status-section">
+            <p id="status-message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Powered by <a href="https://openrouter.ai" target="_blank" rel="noopener">OpenRouter</a> – GPT‑OSS‑120B (free tier)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
